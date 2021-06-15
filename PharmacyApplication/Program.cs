@@ -25,7 +25,7 @@ namespace PharmacyApplication
             Console.WriteLine("==================================");
             zeferan.DrugList(); //Lists all the drugs in our Array
             Console.WriteLine("==================================");
-            zeferan.SaleDrug(5, 12, 1.2);
+            zeferan.SaleDrug(1, 3, 5);
 
         }
     }
