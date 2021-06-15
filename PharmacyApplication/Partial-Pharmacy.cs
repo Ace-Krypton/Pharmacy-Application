@@ -27,16 +27,23 @@ namespace PharmacyApplication
         {
             Console.WriteLine($"Drugs in this Pharmacy {Name}:");
 
-            foreach (Drug item in drugs)
+            foreach (Drug drug in drugs)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(drug);
             }
         }
 
         //SaleDrug method
-        public void SaleDrug()
+        public void SaleDrug(int id, int count, double price)
         {
-
+            foreach (Drug drug in drugs)
+            {
+                if (drug.ID == id)
+                {
+                    return;
+                }
+            }
+            Console.WriteLine($"This {id} is not found in our system");
         }
 
     }

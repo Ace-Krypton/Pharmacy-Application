@@ -23,7 +23,9 @@ namespace PharmacyApplication
             zeferan.AddDrug(drug1); //Adding drug1 into our Array
             zeferan.AddDrug(drug2); //Adding drug2 into our Array
             Console.WriteLine("==================================");
-            zeferan.DrugList(); //
+            zeferan.DrugList(); //Lists all the drugs in our Array
+            Console.WriteLine("==================================");
+            zeferan.SaleDrug(5, 12, 1.2);
 
         }
     }
