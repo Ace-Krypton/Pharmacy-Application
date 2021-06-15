@@ -25,6 +25,8 @@ namespace PharmacyApplication
         //DrugList method for seeing all drugs in the pharmacy
         public void DrugList()
         {
+            Console.WriteLine($"Drugs in this Pharmacy {Name}:");
+
             foreach (Drug item in drugs)
             {
                 Console.WriteLine(item);
