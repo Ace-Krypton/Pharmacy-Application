@@ -36,7 +36,7 @@ namespace PharmacyApplication
         //ToString() method that returns ID, Name, Price and Count  
         public override string ToString()
         {
-            return $"ID:{ID} Name:{Name} Price:{Price} Count:{Count}";
+            return $"ID:{ID} Name:{Name} Price:{Price} Count:{Count} {TypeName}";
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PharmacyApplication
 {
-    class Pharmacy
+    partial class Pharmacy
     {
         //Properties
         public string Name { get; set; }
@@ -14,6 +14,7 @@ namespace PharmacyApplication
         //Fields
         private static int _id;
         public readonly int ID;
+        private Drug[] drugs = new Drug[0];
 
         //Constructor for unique ID
         public Pharmacy()
@@ -22,11 +23,10 @@ namespace PharmacyApplication
             ID = _id;
         }
 
-        //ToString() method that returns Name and ID
-        public override string ToString()
+        //Constructor for Name
+        public Pharmacy(string name) : this()
         {
-            return $"Name:{Name} ID:{ID}";
+            Name = name;
         }
-
     }
 }
