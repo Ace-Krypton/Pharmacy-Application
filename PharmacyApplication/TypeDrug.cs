@@ -22,10 +22,10 @@ namespace PharmacyApplication
             ID = _id;
         }
 
-        //ToString() method, returns TypeName
+        //ToString() method that returns TypeName
         public override string ToString()
         {
-            return $"TypeName:{TypeName} ID:{ID}";
+            return $"TypeName:{TypeName}";
         }
 
     }

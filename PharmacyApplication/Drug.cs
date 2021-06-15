@@ -25,6 +25,7 @@ namespace PharmacyApplication
             ID = _id;
         }
 
+        //ToString() method that returns Name, Price, Count and ID
         public override string ToString()
         {
             return $"Name:{Name} Price:{Price} Count:{Count} ID:{ID}";
