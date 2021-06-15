@@ -6,26 +6,28 @@ using System.Threading.Tasks;
 
 namespace PharmacyApplication
 {
-    class TypeDrug
+    class Drug
     {
         //Properties
-        public string TypeName { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public int Count { get; set; }
 
         //Fields
         private static int _id; //For unique ID
         public readonly int ID; //For unique ID
+        public Type TypeName; 
 
         //Constructor for unique ID
-        public TypeDrug()
+        public Drug()
         {
             _id++;
             ID = _id;
         }
 
-        //ToString() method, returns TypeName
         public override string ToString()
         {
-            return $"TypeName:{TypeName} ID:{ID}";
+            return $"Name:{Name} Price:{Price} Count:{Count} ID:{ID}";
         }
 
     }
