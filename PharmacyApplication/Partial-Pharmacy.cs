@@ -14,9 +14,21 @@ namespace PharmacyApplication
             return $"Name:{Name}";
         }
 
+        //AddDrug method that helps to add new drugs into drugs method in Pharmacy class
         public void AddDrug(Drug newDrug)
         {
+            Array.Resize(ref drugs, drugs.Length + 1);
+            drugs[drugs.Length - 1] = newDrug;
+            Console.WriteLine($"{newDrug} -- added");
+        }
 
+        //DrugList method for seeing all drugs in the pharmacy
+        public void DrugList()
+        {
+            foreach (Drug item in drugs)
+            {
+                Console.WriteLine(item);
+            }
         }
 
     }

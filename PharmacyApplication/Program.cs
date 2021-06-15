@@ -11,12 +11,15 @@ namespace PharmacyApplication
         static void Main(string[] args)
         {
             TypeDrug type1 = new TypeDrug("HeadAche");
+            TypeDrug type2 = new TypeDrug("Heart Rate Stabilazer");
 
             Drug drug1 = new Drug("Analgin", 0.80, 12, type1);
-            Console.WriteLine(drug1);
+            Drug drug2 = new Drug("Valerian", 1.20, 50, type2);
 
-            Pharmacy pharmacy1 = new Pharmacy("Zeferan");
-
+            Pharmacy zeferan = new Pharmacy("Zeferan");
+            zeferan.AddDrug(drug1);
+            zeferan.AddDrug(drug2);
+            zeferan.DrugList();
 
         }
     }
