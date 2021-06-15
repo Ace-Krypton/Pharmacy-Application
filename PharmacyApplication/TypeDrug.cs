@@ -9,7 +9,7 @@ namespace PharmacyApplication
     class TypeDrug
     {
         //Properties
-        public string TypeName { get; set; }
+        public string Name { get; set; }
 
         //Fields
         private static int _id; //For unique ID
@@ -22,10 +22,16 @@ namespace PharmacyApplication
             ID = _id;
         }
 
-        //ToString() method that returns TypeName
+        //Constructor for Name
+        public TypeDrug(string name) : this()
+        {
+            Name = name;
+        }
+
+        //ToString() method that returns TypeName and
         public override string ToString()
         {
-            return $"TypeName:{TypeName}";
+            return $"TypeName:{Name}";
         }
 
     }

@@ -10,13 +10,13 @@ namespace PharmacyApplication
     {
         //Properties
         public string Name { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public int Count { get; set; }
+        public TypeDrug TypeName { get; set; }
 
         //Fields
         private static int _id; //For unique ID
         public readonly int ID; //For unique ID
-        public Type TypeName; 
 
         //Constructor for unique ID
         public Drug()
@@ -24,11 +24,19 @@ namespace PharmacyApplication
             _id++;
             ID = _id;
         }
+        //Constructor for Price Count Name and TypeName
+        public Drug(string name, double price, int count, TypeDrug type) : this()
+        {
+            Name = name;
+            Price = price;
+            Count = count;
+            TypeName = type;
+        }
 
-        //ToString() method that returns Name, Price, Count and ID
+        //ToString() method that returns ID, Name, Price and Count  
         public override string ToString()
         {
-            return $"Name:{Name} Price:{Price} Count:{Count} ID:{ID}";
+            return $"ID:{ID} Name:{Name} Price:{Price} Count:{Count}";
         }
 
     }
