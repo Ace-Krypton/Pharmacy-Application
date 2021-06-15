@@ -33,5 +33,11 @@ namespace PharmacyApplication
             }
         }
 
+        //SaleDrug method
+        public void SaleDrug()
+        {
+
+        }
+
     }
 }
